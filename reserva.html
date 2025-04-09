@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reserva.css">
+</head>
+<body>
+<header class="header">
+    <div class="container contenido-header">
+        <div class="barra">
+            <div class="logo">
+                <h1 class="nombre-sitio">ProViajero<span> Xperience</span></h1>
+            </div>
+            <div class="contacto">
+                <a class="telefono" href="tel:987654321">987654321</a><nav class="navegacion">
+                    <a class="link" href="#">Inicio</a>
+                    <a class="link" href="#">Destinos</a>
+                    <a class="link" href="#">Grupo ProViajero</a>
+                    <a class="link" href="#">Blog</a>
+                    <a class="link" href="#">Registro</a>
+                    <input class="buscar-input" type="text" placeholder="Buscar...">
+                    <button class="buscar-boton" type="submit">Buscar
+                    </button>
+                </nav>
+            </div>
+        </div>
+        <div class="slogan">
+            <h1>¡Encuentra tu destino ideal ahora!</h1>
+            <p>Tus próximas vacaciones te esperan</p>
+        </div>
+    </div>
+</header>
+<div class="container-reservation">
+    <h1>Formulario de Reserva</h1>
+    <form id="reservationForm">
+      <!-- Selección del destino -->
+      <label for="destination">Selecciona el destino:</label>
+      <select id="destination" onchange="updatePackages()">
+        <option value="">-- Seleccionar --</option>
+        <option value="Arequipa">Arequipa</option>
+        <option value="Cuzco">Cuzco</option>
+        <option value="Chiclayo">Chiclayo</option>
+      </select>
+  
+      <!-- Número de personas -->
+      <label for="people">Número de personas:</label>
+      <input type="number" id="people" min="1" value="1">
+  
+      <!-- Selección del paquete -->
+      <label for="package">Selecciona un paquete:</label>
+      <select id="package" onchange="updateAccommodations()">
+        <option value="">-- Seleccionar --</option>
+      </select>
+  
+      <!-- Selección del alojamiento -->
+      <label for="accommodation">Selecciona alojamiento:</label>
+      <select id="accommodation">
+        <option value="">-- Seleccionar --</option>
+      </select>
+  
+      <!-- Fecha de inicio -->
+      <label for="startDate">Fecha de inicio:</label>
+      <input type="date" id="startDate">
+  
+      <!-- Fecha fin -->
+      <label for="endDate">Fecha fin:</label>
+      <input type="date" id="endDate">
+  
+      <!-- Selección de guía -->
+      <label for="guide">Seleccionar Guía:</label>
+      <select id="guide">
+        <option value="">-- Seleccionar --</option>
+        <option value="Mia Smith">Mia Smith</option>
+        <option value="John Doe">John Doe</option>
+        <option value="Sara Connor">Sara Connor</option>
+        <option value="Emma Johnson">Emma Johnson</option>  
+        <option value="Ava Brown">Ava Brown</option>  
+        <option value="Zoe Davis">Zoe Davis</option>  
+        <option value="Lia Wilson">Lia Wilson</option>  
+        <option value="Tia Miller">Tia Miller</option>  
+        <option value="Mia Taylor">Mia Taylor</option>  
+        <option value="Nia Thompson">Nia Thompson</option>  
+        <option value="Gia Anderson">Gia Anderson</option>  
+        <option value="Ria Martinez">Ria Martinez</option>  
+        <option value="Sia Clark">Sia Clark</option>
+      </select>
+  
+      <!-- Botón de reservar -->
+      <button type="button" class="btn" onclick="makeReservation()">Reservar</button>
+      <button type="button" class="btn" onclick="goToProfile()">Ir al Perfil</button>
+      <button type="button" class="btn" onclick="goToReservation()">Ir a Gestionar Reserva</button>
+    </form>
+  
+    <!-- Resumen de reserva -->
+    <div id="reservationSummary" class="hidden">
+      <h2>Resumen de Reserva</h2>
+      <p id="summaryDetails"></p>
+      <button class="btn" onclick="resetForm()">Realizar otra reserva</button>
+      <button class="btn" onclick="window.location.href='gestion-reserva.html'">Gestionar Reservas</button>
+    </div>
+  </div>
+  
+<footer class="footer mt-5">
+    <div class="container">
+        <div class="barra">
+            <div class="logo">
+                <h1 class="nombre-sitio">
+                    ProViajero<span>Xperience</span>
+                </h1>
+            </div>
+            <div class="contacto">
+                <a class="telefono" href="tel:987654321">987654321</a>
+
+                <nav class="navegacion">
+                    <a class="link" href="#">Inicio</a>
+                    <a class="link" href="#">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">Todos los derechos reservados &copy;</p>
+</footer>
+<script src="js/cambios.js"></script>
+<script src="js/reserva.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Reservas</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gestion-reserva.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container contenido-header">
+            <div class="barra">
+                <div class="logo">
+                    <h1 class="nombre-sitio">ProViajero<span> Xperience</span></h1>
+                </div>
+                <div class="contacto">
+                    <a class="telefono" href="tel:987654321">987654321</a><nav class="navegacion">
+                        <a class="link" href="#">Inicio</a>
+                        <a class="link" href="#">Destinos</a>
+                        <a class="link" href="#">Grupo ProViajero</a>
+                        <a class="link" href="#">Blog</a>
+                        <a class="link" href="#">Registro</a>
+                        <input class="buscar-input" type="text" placeholder="Buscar...">
+                        <button class="buscar-boton" type="submit">Buscar
+                        </button>
+                    </nav>
+                </div>
+            </div>
+            <div class="slogan">
+                <h1>¡Encuentra tu destino ideal ahora!</h1>
+                <p>Tus próximas vacaciones te esperan</p>
+            </div>
+        </div>
+    </header>
+    <div class="container.ps">
+        <h2>Gestión de Reservas</h2>
+        <h5>Aquí podrás gestionar el estado de tus reservas: </h5>
+        <table id="reservationTable" class="reservation-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Destino</th>
+                    <th>Paquete</th>
+                    <th>Precio del Paquete</th> 
+                    <th>Alojamiento</th>
+                    <th>Fecha Inicio</th>
+                    <th>Fecha Fin</th>
+                    <th>Número de Personas</th>
+                    <th>Guía</th>
+                    <th>Monto Total</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las reservas se cargarán dinámicamente aquí -->
+            </tbody>
+        </table>
+    
+        <div class="action-buttons">
+            <button onclick="window.location.href='reserva.html'" class="btn">Realizar otra Reserva</button>
+            <button onclick="window.location.href='perfil.html'" class="btn">Visualizar mi Perfil</button>
+        </div>
+    </div>
+    <!-- Modal de Acciones -->
+    <div id="actionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="actionTitle">Confirmar Acción</h3>
+            <p id="actionMessage">¿Estás seguro de que deseas continuar con esta acción?</p>
+            <div id="actionButtons">
+                <button id="actionConfirm" class="btn" onclick="confirmAction()">Confirmar</button>
+                <button id="actionCancel" class="btn" onclick="closeModal()">Cancelar</button>
+            </div>
+        </div>
+    </div> 
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="barra">
+                <div class="logo">
+                    <h1 class="nombre-sitio">
+                        ProViajero<span>Xperience</span>
+                    </h1>
+                </div>
+                <div class="contacto">
+                    <a class="telefono" href="tel:987654321">987654321</a>
+    
+                    <nav class="navegacion">
+                        <a class="link" href="#">Inicio</a>
+                        <a class="link" href="#">Contacto</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">Todos los derechos reservados &copy;</p>
+    </footer>
+    <script src="js/cambios.js"></script>
+    <script src="js/gestion-reservas.js"></script>
+</body>
+</html>

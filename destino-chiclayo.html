@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chiclayo</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style-destinos.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <!-- Header-->
+    <header class="header">
+      <div class="container contenido-header">
+        <div class="barra">
+          <div class="logo">
+            <h1 class="nombre-sitio">ProViajero<span> Xperience</span></h1>
+          </div>
+          <div class="contacto">
+            <a class="telefono" href="tel:987654321">987654321</a>
+            <nav class="navegacion">
+              <a class="link" href="#">Inicio</a>
+              <a class="link" href="#">Destinos</a>
+              <a class="link" href="#">Grupo ProViajero</a>
+              <a class="link" href="#">Blog</a>
+              <a class="link" href="#">Registro</a>
+              <input class="buscar-input" type="text" placeholder="Buscar..." />
+              <button class="buscar-boton" type="submit">Buscar</button>
+            </nav>
+          </div>
+        </div>
+        <div class="slogan">
+          <h1>¡Encuentra tu destino ideal ahora!</h1>
+          <p>Tus próximas vacaciones te esperan</p>
+        </div>
+      </div>
+    </header>
+    <!-- Sección de carrusel-->
+    <section class="seccion-destino">
+      <h2 class="titulo-destino">Chiclayo - Tesoros de la Cultura Mochica</h2>
+
+      <div class="carrusel-destino">
+        <input type="radio" name="gallery" id="img1" checked />
+        <input type="radio" name="gallery" id="img2" />
+        <input type="radio" name="gallery" id="img3" />
+
+        <div class="galeria-wrapper">
+          <div class="elemento-imagen">
+            <label for="img3" class="anterior">&#10094;</label>
+            <img src="img/c_chi-plaza-principal.jpg" alt="Parque principal de Chiclayo" />
+            <label for="img2" class="siguiente">&#10095;</label>
+          </div>
+
+          <div class="elemento-imagen">
+            <label for="img1" class="anterior">&#10094;</label>
+            <img src="img/c_chi-paseo-musas.jpg" alt="El Paseo de las Musas" />
+            <label for="img3" class="siguiente">&#10095;</label>
+          </div>
+
+          <div class="elemento-imagen">
+            <label for="img2" class="anterior">&#10094;</label>
+            <img src="img/c_chi-paseo-yortuque.jpg" alt="Paseo Yortuque" />
+            <label for="img1" class="siguiente">&#10095;</label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sección de Reserva y Descripción -->
+    <div class="info-destino">
+      <div class="contenedor-precios">
+        <span class="oferta">¿Qué esperas? ¡Realiza tu reserva!</span>
+      </div>
+      <div class="columnas-info">
+        <div class="columna">
+          <p class="descripcion">
+            Chiclayo, conocida como la Capital de la Amistad, es una ciudad vibrante que ofrece 
+            una rica historia y cultura. Situada en la costa norte del Perú, es famosa por su 
+            diversidad gastronómica y su proximidad a importantes sitios arqueológicos.
+          </p>
+          <img src="img/mini_chiclayo.png" alt="Mini" class="imagen-info" />
+      <!-- Mensaje de Paquetes Disponibles -->
+      <section class="mensaje-paquetes">
+        <h2>Paquetes Disponibles:</h2>
+      </section>
+          <!-- Botones de Paquetes -->
+          <div class="paquetes">
+            <button class="paquete-btn basic" onclick="mostrarInfo('basic')">
+              Chiclayo Basic
+            </button>
+            <button class="paquete-btn bronce" onclick="mostrarInfo('bronce')">
+              Chiclayo Bronce
+            </button>
+            <button
+              class="paquete-btn platinum"
+              onclick="mostrarInfo('platinum')"
+            >
+              Chiclayo Platinum
+            </button>
+            <button class="paquete-btn gold" onclick="mostrarInfo('gold')">
+              Chiclayo Gold
+            </button>
+          </div>
+
+          <!-- Contenedor de Descripción de Paquetes -->
+          <div id="info-paquete" class="info-paquete">
+            <!-- Aquí se inyectará el contenido de cada paquete con JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mensaje sobre actividades -->
+    <section class="mensaje-actividades">
+      <h2>Actividades inolvidables en Chiclayo</h2>
+      <p>
+        Descubre la fascinante historia de Chiclayo a través de actividades emocionantes. 
+        Visita las impresionantes huacas de la civilización mochica, explora el famoso Museo 
+        Tumbas Reales y disfruta de su deliciosa gastronomía en un tour culinario.
+      </p>
+      <p>¡Explora lo mejor de esta ciudad maravillosa!</p>
+    </section>
+
+    <!-- Galería -->
+    <div class="contenedor-img">
+      <div class="caja-img">
+        <a href="#"></a>
+        <figure>
+          <img
+            src="img/g_chiclayo-activity1.jpg"
+            alt="Actividad 1 en Chiclayo"
+          />
+        </figure>
+      </div>
+      <div class="caja-img">
+        <a href="#"></a>
+        <figure>
+          <img
+            src="img/g_chiclayo-activity2.jpg"
+            alt="Actividad 2 en Chiclayo"
+          />
+        </figure>
+      </div>
+      <div class="caja-img">
+        <a href="#"></a>
+        <figure>
+          <img
+            src="img/g_chiclayo-activity3.jpg"
+            alt="Actividad 3 en Chiclayo"
+          />
+        </figure>
+      </div>
+      <div class="caja-img">
+        <a href="#"></a>
+        <figure>
+          <img
+            src="img/g_chiclayo-activity4.jpg"
+            alt="Actividad 4 en Chiclayo"
+          />
+        </figure>
+      </div>
+      <div class="caja-img">
+        <a href="#"></a>
+        <figure>
+          <img
+            src="img/g_chiclayo-activity5.jpg"
+            alt="Actividad 5 en Chiclayo"
+          />
+        </figure>
+      </div>
+      <div class="caja-img">
+        <a href="#"></a>
+        <figure>
+          <img
+            src="img/g_chiclayo-activity6.jpg"
+            alt="Actividad 6 en Chiclayo"
+          />
+        </figure>
+      </div>
+      <div class="caja-img">
+        <a href="#"></a>
+        <figure>
+          <img
+            src="img/g_chiclayo-activity7.jpg"
+            alt="Actividad 7 en Chiclayo"
+          />
+        </figure>
+      </div>
+    </div>
+    <footer class="footer mt-5">
+      <div class="container">
+          <div class="barra">
+              <div class="logo">
+                  <h1 class="nombre-sitio">ProViajero<span>Xperience</span></h1>
+              </div>
+              <div class="contacto">
+                  <a class="telefono" href="tel:987654321">987654321</a>
+                  <nav class="navegacion">
+                      <a class="link" href="#">Inicio</a>
+                      <a class="link" href="#">Contacto</a>
+                  </nav>
+              </div>
+          </div>
+      </div>
+      <p class="copyright">Todos los derechos reservados &copy;</p>
+  </footer>
+  <script src="js/destinos.js"></script>
+  <script src="js/cambios.js"></script>
+  </body>
+</html>

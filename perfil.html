@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style-mi-perfil.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css"/>
+  </head>
+  <!-- Header-->
+  <header class="header">
+    <div class="container contenido-header">
+      <div class="barra">
+        <div class="logo">
+          <h1 class="nombre-sitio">ProViajero<span> Xperience</span></h1>
+        </div>
+        <div class="contacto">
+          <a class="telefono" href="tel:987654321">987654321</a>
+          <nav class="navegacion">
+            <a class="link" href="#">Inicio</a>
+            <a class="link" href="#">Destinos</a>
+            <a class="link" href="#">Grupo ProViajero</a>
+            <a class="link" href="#">Blog</a>
+            <a class="link" href="#">Registro</a>
+            <input class="buscar-input" type="text" placeholder="Buscar..." />
+            <button class="buscar-boton" type="submit">Buscar</button>
+          </nav>
+        </div>
+      </div>
+      <div class="slogan">
+        <h1>¡Encuentra tu destino ideal ahora!</h1>
+        <p>Tus próximas vacaciones te esperan</p>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div class="container js">
+       <h2>Mi Perfil</h2> 
+      <section class="user-data">
+        <h3>Mis Datos</h3>
+        <ul>
+          <li><strong>Nombre:</strong> <span id="nombre-usuario"></span></li>
+          <li><strong>Apellidos:</strong> <span id="apellido-usuario"></span></li>
+          <li><strong>Correo Electrónico:</strong> <span id="correo-usuario"></span></li>
+          <li><strong>Teléfono:</strong> <span id="telefono-usuario"></span></li>
+        </ul>
+        <button id="logout-button" class="btn-logout">Cerrar Sesión</button>  
+      </section>
+    
+      <!-- Mis Compras -->
+      <section class="user-purchases">
+        <h3>Mis Compras</h3>
+        <!-- Filtro colocado como bloque separado -->
+        <div class="filter-section">
+          <label for="filter-status">Estado del Pedido:</label>
+          <select id="filter-status">
+            <option value="todos">--Todos--</option>
+            <option value="Proceso">Procesando</option>
+            <option value="Completado">Completado</option>
+          </select>
+          <button id="apply-filter">Aplicar Filtro</button>
+        </div>
+        <!-- Tabla de Reservaciones -->
+        <table class="reservation-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Destino</th>
+              <th>Paquete</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Compras dinámicas -->
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <!-- Modal para mostrar detalles -->
+  <div id="detailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <h2>Detalles de la Compra</h2>
+      <p><strong>Destino:</strong> <span id="modal-destination"></span></p>
+      <p><strong>Paquete:</strong> <span id="modal-package"></span></p>
+      <p><strong>Alojamiento:</strong> <span id="modal-accommodation"></span></p>
+      <p><strong>Fecha Inicio:</strong> <span id="modal-start-date"></span></p>
+      <p><strong>Fecha Fin:</strong> <span id="modal-end-date"></span></p>
+      <p><strong>Guia: </strong><span id="modal-guide"></span></p>
+      <p><strong>Número de Personas:</strong> <span id="modal-people"></span></p>
+      <p><strong>Estado:</strong> <span id="modal-status"></span></p>
+      <p><strong>Total:</strong> S/. <span id="modal-total"></span></p>
+    </div>
+  </div>
+</body>
+  <!--Footer-->
+  <footer class="footer mt-5">
+    <div class="container">
+      <div class="barra">
+        <div class="logo">
+          <h1 class="nombre-sitio">ProViajero<span>Xperience</span></h1>
+        </div>
+        <div class="contacto">
+          <a class="telefono" href="tel:987654321">987654321</a>
+          <nav class="navegacion">
+            <a class="link" href="#">Inicio</a>
+            <a class="link" href="#">Contacto</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">Todos los derechos reservados &copy;</p>
+  </footer>
+  <script src="js/cambios.js"></script>
+  <script src="js/perfil.js"></script>
+</html>

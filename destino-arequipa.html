@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arequipa</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style-destinos.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Header-->
+    <header class="header">
+      <div class="container contenido-header">
+        <div class="barra">
+          <div class="logo">
+            <h1 class="nombre-sitio">ProViajero<span> Xperience</span></h1>
+          </div>
+          <div class="contacto">
+            <a class="telefono" href="tel:987654321">987654321</a>
+            <nav class="navegacion">
+              <a class="link" href="#">Inicio</a>
+              <a class="link" href="#">Destinos</a>
+              <a class="link" href="#">Grupo ProViajero</a>
+              <a class="link" href="#">Blog</a>
+              <a class="link" href="#">Registro</a>
+              <input class="buscar-input" type="text" placeholder="Buscar..." />
+              <button class="buscar-boton" type="submit">Buscar</button>
+            </nav>
+          </div>
+        </div>
+        <div class="slogan">
+          <h1>¡Encuentra tu destino ideal ahora!</h1>
+          <p>Tus próximas vacaciones te esperan</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sección de carrusel-->
+    <section class="seccion-destino">
+      <h2 class="titulo-destino">
+        Arequipa - La Ciudad Blanca de los Volcanes
+      </h2>
+
+      <div class="carrusel-destino">
+        <input type="radio" name="gallery" id="img1" checked />
+        <input type="radio" name="gallery" id="img2" />
+        <input type="radio" name="gallery" id="img3" />
+
+        <div class="galeria-wrapper">
+          <div class="elemento-imagen">
+            <label for="img3" class="anterior">&#10094;</label>
+            <img src="img/c_aqp-plaza.png" alt="Plaza de Arequipa" />
+            <label for="img2" class="siguiente">&#10095;</label>
+          </div>
+
+          <div class="elemento-imagen">
+            <label for="img1" class="anterior">&#10094;</label>
+            <img
+              src="img/c-aqp-monasterio.jpg"
+              alt="Monasterio de Santa Catalina"
+            />
+            <label for="img3" class="siguiente">&#10095;</label>
+          </div>
+
+          <div class="elemento-imagen">
+            <label for="img2" class="anterior">&#10094;</label>
+            <img src="img/c_aqp-yanahuara.jpg" alt="Yanahuara" />
+            <label for="img1" class="siguiente">&#10095;</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Reserva y Descripción -->
+    <div class="info-destino">
+      <div class="contenedor-precios">
+        <span class="oferta">¿Qué esperas? ¡Realiza tu reserva!</span>
+      </div>
+
+      <div class="columnas-info">
+        <div class="columna">
+          <p class="descripcion">
+            Arequipa, conocida como la Ciudad Blanca por su arquitectura de
+            sillar, es un destino que combina maravillas naturales y culturales.
+            Rodeada de majestuosos volcanes, esta ciudad ofrece una experiencia
+            única llena de historia y tradiciones.
+          </p>
+          <img src="img/mini_aqp.png" alt="Mini" class="imagen-info" />
+      <!-- Mensaje de Paquetes Disponibles -->
+      <section class="mensaje-paquetes">
+        <h2>Paquetes Disponibles:</h2>
+      </section>
+          <!-- Botones de Paquetes -->
+          <div class="paquetes">
+            <button class="paquete-btn basic" onclick="mostrarInfo('basic')">
+              Arequipa Basic
+            </button>
+            <button class="paquete-btn bronce" onclick="mostrarInfo('bronce')">
+              Arequipa Bronce
+            </button>
+            <button
+              class="paquete-btn platinum"
+              onclick="mostrarInfo('platinum')"
+            >
+              Arequipa Platinum
+            </button>
+            <button class="paquete-btn gold" onclick="mostrarInfo('gold')">
+              Arequipa Gold
+            </button>
+          </div>
+          <!-- Contenedor de Descripción de Paquetes -->
+          <div id="info-paquete" class="info-paquete">
+            <!-- Aquí se inyectará el contenido de cada paquete con JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mensaje sobre actividades -->
+    <section class="mensaje-actividades">
+      <h2>Actividades inolvidables en Arequipa</h2>
+      <p>
+        Vive momentos inolvidables en Arequipa. Disfruta de emocionantes
+        caminatas en el cañón del Colca, recorre monasterios antiguos, y
+        participa en clases de cocina aprendiendo a preparar platos típicos de
+        la región.
+      </p>
+      <p>¡Explora lo mejor de esta ciudad maravillosa!</p>
+    </section>
+    <!-- Galería -->
+    <div class="contenedor-img">
+      <div class="caja-img">
+        <a href="#"></a>
+        <figure>
+          <img src="img/g_aqp-activity1.jpg" alt="Actividad 1 en Arequipa" />
+        </figure>
+      </div>
+      <div class="caja-img">
+        <a href="#"></a>
+        <figure>
+          <img src="img/g_aqp-activity2.jpg" alt="Actividad 2 en Arequipa" />
+        </figure>
+      </div>
+      <div class="caja-img">
+        <a href="#"></a>
+        <figure>
+          <img src="img/g_aqp-activity3.jpg" alt="Actividad 3 en Arequipa" />
+        </figure>
+      </div>
+      <div class="caja-img">
+        <a href="#"></a>
+        <figure>
+          <img src="img/g_aqp-activity4.jpg" alt="Actividad 4 en Arequipa" />
+        </figure>
+      </div>
+      <div class="caja-img">
+        <a href="#"></a>
+        <figure>
+          <img src="img/g_aqp-activity5.jpg" alt="Actividad 5 en Arequipa" />
+        </figure>
+      </div>
+      <div class="caja-img">
+        <a href="#"></a>
+        <figure>
+          <img src="img/g_aqp-activity6.jpg" alt="Actividad 6 en Arequipa" />
+        </figure>
+      </div>
+      <div class="caja-img">
+        <a href="#"></a>
+        <figure>
+          <img src="img/g_aqp-activity7.jpg" alt="Actividad 7 en Arequipa" />
+        </figure>
+      </div>
+    </div>
+    <!--Footer-->
+    <footer class="footer mt-5">
+      <div class="container">
+        <div class="barra">
+          <div class="logo">
+            <h1 class="nombre-sitio">ProViajero<span>Xperience</span></h1>
+          </div>
+          <div class="contacto">
+            <a class="telefono" href="tel:987654321">987654321</a>
+            <nav class="navegacion">
+              <a class="link" href="#">Inicio</a>
+              <a class="link" href="#">Contacto</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">Todos los derechos reservados &copy;</p>
+    </footer>
+    <script src="js/destinos.js"></script>
+    <script src="js/cambios.js"></script>
+  </body>
+</html>
