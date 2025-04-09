@@ -1,0 +1,106 @@
+/* Contenedor principal */
+body {
+    background: #f2f2f2; /* Fondo de la página */
+  }
+  
+  .login-containerds {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  h1p {
+    font-size: 28px;
+    color: #cb1d1d;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  h2s {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+  
+  /* Imagen */
+  .admin-image {
+    width: 150px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 3px solid #cb1d1d; /* Bordes redondeados en la imagen */
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  form input {
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    width: 90%;
+    margin: 10px auto;
+    box-sizing: border-box;
+  }
+  
+  form input:focus {
+    border-color: #cb1d1d;
+    outline: none;
+  }
+  
+  /* Botón de inicio de sesión */
+  #login-btn {
+    background-color: #cb1d1d;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 90%;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  #login-btn:hover {
+    background-color: #a31616;
+  }
+  
+  /* Mensaje de error */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+  }
+  
+  /* Efecto de carga */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  #login-btn:active {
+    animation: bounce 0.3s;
+  }
+  

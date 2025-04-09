@@ -1,0 +1,215 @@
+/* Estilos generales del cuerpo */
+body {
+  background-color: #ecf0f1; 
+}
+
+.container ps {
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en una columna */
+  align-items: center; /* Centra la tabla en el eje horizontal */
+  justify-content: flex-start; /* Mantiene el contenido en la parte superior */
+  padding: 20px;
+  margin-top: 20px; /* Ajusta si hay espacio de más arriba */
+  margin-bottom: 20px; /* Ajusta si hay espacio de más abajo */
+}
+/* Ajuste del ancho de la tabla */
+.reservation-table {
+  width: 80%; /* Ajusta el ancho de la tabla*/
+  max-width: 1200px; /* Tamaño máximo de la tabla */
+  margin: 0 auto; /* Asegura que la tabla se centre */
+  border-collapse: collapse; /* Elimina el espacio entre celdas */
+}
+
+/* Títulos */
+h2 {
+  text-align: center;
+  font-size: 3.5rem;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+h5 {
+  text-align: center;
+  font-size: 1.9rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Estilos de la tabla */
+.reservation-table {
+  width: 100%;
+  border-collapse: collapse; /* Elimina los espacios entre celdas */
+  margin-bottom: 20px;
+}
+
+/* Encabezados de tabla */
+.reservation-table th {
+  background-color: #000000; /* Color azul de fondo */
+  color: #fff; /* Texto blanco */
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Estilo para las celdas de la tabla */
+.reservation-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #ddd; /* Borde suave */
+  font-size: 1.3rem;
+  color: #333;
+}
+
+/* Colores alternados en las filas */
+.reservation-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Fila de color gris claro */
+}
+
+.reservation-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* Fila blanca */
+}
+
+/* Columnas específicas */
+.reservation-table th:nth-child(4), /* Precio del Paquete */
+.reservation-table td:nth-child(4),
+.reservation-table th:nth-child(5), /* Alojamiento */
+.reservation-table td:nth-child(5),
+.reservation-table th:nth-child(6), /* Fecha Inicio */
+.reservation-table td:nth-child(6),
+.reservation-table th:nth-child(7), /* Fecha Fin */
+.reservation-table td:nth-child(7),
+.reservation-table th:nth-child(10), /* Monto Total */
+.reservation-table td:nth-child(10) {
+  min-width: 150px;
+}
+
+/* Columnas de Precio y Monto */
+.reservation-table th:nth-child(4), /* Precio del Paquete */
+.reservation-table td:nth-child(4),
+.reservation-table th:nth-child(10), /* Monto Total */
+.reservation-table td:nth-child(10) {
+  width: 160px;
+}
+
+/* Ajustes en la columna de Acciones */
+.reservation-table th:nth-child(12), /* Acciones */
+.reservation-table td:nth-child(12) {
+  width: 180px;
+}
+
+/* Estilo de la celda de acciones para distribuir los botones en columna */
+.reservation-table td.actions {
+  display: flex; /* flexbox para alinear los botones */
+  flex-direction: column; /* Distribuir los botones verticalmente */
+  gap: 10px; /* Añadir espacio de 10px entre los botones */
+  padding: 15px 0; /* Espaciado dentro de la celda */
+  text-align: center; /* Centrar los botones */
+}
+
+/* Estilo de los botones dentro de la tabla */
+.reservation-table td.actions .btn {
+  background-color: #000000; /* Fondo negro para los botones */
+  color: #fff;
+  border: none;
+  padding: 12px 20px; /* Tamaño de los botones */
+  font-size: 1rem; /* Tamaño de fuente */
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%; /* Hacer que los botones ocupen todo el ancho de la celda */
+  transition: background-color 0.3s ease;
+}
+
+.reservation-table td.actions .btn:hover {
+  background-color: #6b716d; /* Efecto hover */
+}
+
+
+/* Estilo para los botones fuera de la tabla */
+.action-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.action-buttons .btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.action-buttons .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .reservation-table {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .reservation-table th, .reservation-table td {
+    padding: 10px;
+  }
+
+  .action-buttons .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Estilo para el Modal de Acción */
+#actionModal {
+  display: none;  /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+#actionModal .modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 400px;
+  width: 80%;
+}
+
+#actionModal .close {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#actionModal h3 {
+  margin-bottom: 20px;
+}
+
+#actionModal #actionButtons button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+#actionModal #actionButtons button:hover {
+  background-color: #000000;
+  color: white;
+}

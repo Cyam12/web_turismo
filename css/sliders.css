@@ -1,0 +1,31 @@
+.slider {
+    width: auto; /* Ajusta el ancho del slider según tus necesidades */
+    height: auto; /* Altura automática para ajustarse al contenido */
+    margin: auto; /* Centra el slider */
+    overflow: hidden; /* Oculta las imágenes que sobresalen del contenedor */
+}
+
+.slider .slide-track {
+    display: flex; /* Disposición flexible para las imágenes */
+    animation: scroll 40s linear infinite; /* Animación continua */
+    width: calc(150px * 40); /* Ajusta el ancho total según el número de imágenes */
+}
+
+.slider .slide {
+    width: 150px; /* Ajusta el ancho de cada imagen */
+    margin-right: 10px; /* Espacio entre las imágenes */
+}
+
+.slider .slide img {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-150px * 20)); /* config para un retroceso más corto */
+    }
+}

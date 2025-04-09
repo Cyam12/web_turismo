@@ -1,0 +1,449 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos generales para la sección destino*/
+.seccion-destino {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ecf0f1;
+}
+
+/* Estilo del título con animación */
+.titulo-destino {
+  font-family: "Arial", sans-serif;
+  font-size: 5.5rem; /* tamaño de letra */
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transición */
+}
+
+/* Animación cuando el ratón está sobre el título */
+.titulo-destino:hover {
+  color: #16a085; /* Cambia el color del texto al verde */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* Estilo general para el carrusel */
+.carrusel-destino {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carrusel-destino input {
+  display: none;
+}
+
+.galeria-wrapper {
+  position: relative;
+}
+
+/* Tamaño fijo para las imágenes del carrusel */
+.elemento-imagen {
+  display: none;
+  position: relative;
+  text-align: center;
+  height: 380px; /* Altura fija */
+  width: 620px; /* Ancho fijo */
+  margin: 0 auto; /* Centra las imágenes */
+}
+
+.elemento-imagen img {
+  width: 100%; /* Ajusta el ancho al contenedor */
+  height: 100%; /* Ajusta la altura al contenedor */
+  object-fit: cover; /* Ajusta la imagen al contenedor sin deformarla */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mostrar las imágenes seleccionadas */
+.carrusel-destino
+  input#img1:checked
+  ~ .galeria-wrapper
+  .elemento-imagen:nth-child(1),
+.carrusel-destino
+  input#img2:checked
+  ~ .galeria-wrapper
+  .elemento-imagen:nth-child(2),
+.carrusel-destino
+  input#img3:checked
+  ~ .galeria-wrapper
+  .elemento-imagen:nth-child(3) {
+  display: block;
+}
+
+/* Estilos para los botones de navegación (prev y next) */
+.anterior,
+.siguiente {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #34495e;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.anterior:hover,
+.siguiente:hover {
+  background-color: rgba(52, 73, 94, 0.8);
+}
+
+.anterior {
+  left: -40px;
+}
+
+.siguiente {
+  right: -40px;
+}
+
+/* Responsibidad ventanas pequeñas */
+@media (max-width: 768px) {
+  .titulo-cuzco {
+    font-size: 2rem;
+  }
+
+  .carrusel-cuzco {
+    width: 90%;
+  }
+
+  .anterior,
+  .siguiente {
+    font-size: 1.5rem;
+    left: -20px;
+    right: -20px;
+  }
+
+  .elemento-imagen {
+    width: 280px;
+    height: 200px;
+  }
+}
+
+/* Contenedor de precios */
+.contenedor-precios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #f5f5dc;
+  border: 2px solid #e67e22;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contenedor-precios:hover {
+  transform: translateY(-10px);
+}
+
+.oferta {
+  background-color: #e67e22;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: pulso 1.5s infinite;
+}
+
+/* Animación para la oferta */
+@keyframes pulso {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Información de destino */
+.info-destino {
+  text-align: center;
+  margin: 20px;
+}
+
+.columnas-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.columna {
+  text-align: center;
+}
+
+.descripcion {
+  font-size: 1.4em;
+  color: #555;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Imagen mini */
+.imagen-info {
+  width: 190px;
+  height: 230px;
+  margin: 20px auto 0 auto;
+  display: block;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.6));
+}
+/* Estilo para el mensaje de Paquetes Disponibles */
+.mensaje-paquetes h2 {
+  text-align: center;
+  color: #e67e22;
+  font-size: 2.8em;
+  font-family: "Arial", sans-serif;
+  margin-bottom: 20px; /* Espacio debajo del mensaje */
+}
+/* Botones de Paquetes */
+.paquetes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.paquete-btn {
+  padding: 20px 35px; /* Aumenta el padding para agrandar el botón */
+  font-size: 1.3em; /* Aumenta el tamaño de la fuente */
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.paquete-btn:hover {
+  transform: scale(1.05);
+}
+
+.basic { background-color: #1abc9c; } /* Verde agua */
+.bronce { background-color: #cd7f32; } /* Bronce */
+.platinum { background-color: #7f8c8d; } /* Plomo */
+.gold { background-color: #ffd700; } /* Dorado */
+
+
+
+/* Contenedor de Información de Paquete */
+.info-paquete {
+  display: none; /* Inicialmente oculto */
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;  /* Centra todo el contenido dentro del contenedor */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Cuando se selecciona, se mostrará el contenido */
+.info-paquete.mostrar {
+  display: block; /* Solo se muestra cuando tiene la clase 'mostrar' */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega el box-shadow solo cuando está visible */
+  padding: 20px; /* Opcional, para hacer el contenedor más espacioso */
+  margin-top: 50px; /* Espacio arriba para separarlo del resto del contenido */
+}
+
+/* Efecto de hover para todos los paquetes */
+.info-paquete:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Color distintivo para cada paquete */
+.info-paquete.basic:hover {
+  border: 2px solid #20c997; /* Verde agua */
+}
+
+.info-paquete.bronce:hover {
+  border: 2px solid #cd7f32; /* Bronce */
+}
+
+.info-paquete.platinum:hover {
+  border: 2px solid #b0b0b0; /* Platino */
+}
+
+.info-paquete.gold:hover {
+  border: 2px solid #ffd700; /* Dorado */
+}
+
+/* Resplandor suave cuando se hace hover */
+.info-paquete::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.info-paquete:hover::before {
+  opacity: 1;
+}
+
+/* Estilo para centrar el título */
+.titulo-paquete {
+  text-align: center;  /* Centra el texto */
+  font-size: 1.8em;    /* Ajusta el tamaño de la fuente */
+  margin-bottom: 15px; /* Espacio debajo del título */
+}
+/* Alineación a la izquierda para los párrafos */
+.info-paquete p {
+  text-align: left;   /* Alinea el texto de los párrafos a la izquierda */
+  margin: 10px 0;     /* Espacio entre los párrafos */
+  font-size: 1.1em;   /* Ajusta el tamaño de la fuente si es necesario */
+}
+/* Estilo para el botón de "Agregar al carrito" */
+.agregar-carrito-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-family: "Arial", sans-serif;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  z-index: 10; /* Asegura que el botón esté en el frente */
+  position: relative; /* Necesario para que z-index funcione */
+}
+
+
+.agregar-carrito-btn:hover {
+  background-color: #d35400; /* Cambia el color al pasar el ratón */
+}
+
+/* Estilo para la imagen dentro del botón */
+.icono-carrito {
+  width: 20px; /* Ajusta el tamaño de la imagen */
+  height: 20px;
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+
+
+/* Actividades titulo del grid */
+.mensaje-actividades {  
+  text-align: center; /* Esto centra el texto de los headings y párrafos */  
+  margin: 30px 0;
+  background-color: #ecf0f1;
+  padding: 40px 20px;
+}  
+
+.mensaje-actividades h2 {  
+  font-size: 2.5em;  
+  font-family: "Arial", sans-serif;  
+  color: #e67e22;  
+  margin-bottom: 20px;  
+}  
+
+.mensaje-actividades p {  
+  font-size: 1.4em;  
+  max-width: 1200px;  
+  line-height: 1.6;  
+  margin: 10px auto; /* a auto para centrar el elemento */  
+  color: #555;  
+  text-align: center; /* Asegura que el texto esté centrado */  
+}
+
+/** Galeria **/
+.contenedor-img {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px;
+  grid-gap: 20px;
+}
+
+.caja-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.caja-img figure {
+  margin: 0;
+}
+
+.caja-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.caja-img:hover img {
+  transform: scale(1.1);
+}
+
+.contenedor-img .caja-img figure {
+  width: 100%;
+  height: 100%;
+}
+.contenedor-img .caja-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contenedor-img .caja-img:nth-child(1) {
+  grid-column-start: span 2;
+}
+.contenedor-img .caja-img:nth-child(4) {
+  grid-row-start: span 2;
+}
+@media screen and (max-width: 800px) {
+  .contenedor-img {
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-rows: 200px;
+  }
+  .contenedor-img .caja-img:nth-child(1) {
+    grid-column-start: span 1;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contenedor-img {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contenedor-img .caja-img img {
+    height: 200px;
+  }
+}

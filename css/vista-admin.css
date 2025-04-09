@@ -1,0 +1,110 @@
+/* Estilos para el panel administrativo */
+body {
+  background: #f2f2f2; /* Fondo de la página */
+}
+.admin-panel {
+  margin-top: 20px; /* espacio entre el header y el panel */
+  margin-bottom: 20px; /*  espacio entre el panel y el footer */
+  padding: 20px; /* Espaciado interno para que el contenido no toque los bordes */
+  background-color: #f2f2f2; 
+  border-radius: 8px;
+}
+
+.containerts {
+  max-width: 1200px; 
+  margin: 0 auto; /* Centrar el contenido */
+  padding: 20px; 
+  background-color: #fff; /* Fondo blanco para el contenido */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para destacar el panel */
+}
+
+/* Estilos específicos para h1 y h2 del panel administrativo */
+.admin-h1 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  font-size: 2rem; /* Tamaño de fuente  */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.admin-h2 {
+  font-family: 'Arial', sans-serif;
+  color: #555;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+button#logout-admin-btn {
+  background-color: #ff4d4d; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button#logout-admin-btn:hover {
+  background-color: #ff1a1a; /* Color al pasar el cursor */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Colapsar bordes */
+  margin-top: 20px; /* Separar la tabla del título */
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f1f1f1; /* Color de fondo para los encabezados de la tabla */
+  color: #333;
+}
+
+table tbody tr:hover {
+  background-color: #e9e6e6; /* Resaltar fila al pasar el cursor */
+}
+
+/* Estilo para el modal */
+#reservationsModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+  display: none;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+button {
+  background-color: #007bff; /* Color de fondo del botón */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3; /* Color del botón al pasar el cursor */
+}

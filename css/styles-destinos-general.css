@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.destino {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Establecemos la dirección de los elementos como columna */
+    align-items: flex-start; /* Alineamos los elementos al inicio del eje principal (superior) */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.destino h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.destino-contenido { /* Creamos un contenedor para la imagen, texto y botón */
+    display: flex;
+    justify-content: space-between;
+}
+
+.destino img {
+    width: 50%;
+    align-self: center;
+}
+.destino img2 {
+    width: 50%;
+    align-self: flex-start;
+}
+
+.destino p {
+    flex: 1;
+    text-align: center;
+}
+
+.btn-mas-destino {
+    background-color: #366335;
+    align-self: flex-end;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px; /* Reducimos el padding para hacerlo más pequeño */
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-mas-destino:hover {
+    background-color: #284a27;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+

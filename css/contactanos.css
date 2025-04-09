@@ -1,0 +1,141 @@
+/* Estilos generales */
+body {
+    font-family: 'Relaway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef3f7;
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título principal */
+.titulo-contacto {
+    color: #000;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Texto introductorio */
+.texto-intro {
+    text-align: center;
+    color: #000; 
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.texto-intro .resaltado {
+    font-weight: bold;
+}
+
+/* Sección de contacto */
+.seccion-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+/* Información de contacto */
+.info-contacto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.imagen-contacto {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.detalles-info p {
+    margin: 10px 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detalles-info i {
+    color: #e74c3c;
+    font-size: 1.5rem;
+}
+
+/* Formulario de contacto */
+.formulario-contacto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.formulario-contacto h3 {
+    font-size: 2rem;
+    color: #34495e;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea,
+.formulario-contacto button {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.formulario-contacto textarea {
+    resize: none;
+    height: 150px;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.formulario-contacto button {
+    background: linear-gradient(90deg, #3498db, #e74c3c);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.formulario-contacto button:hover {
+    transform: scale(1.05);
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .seccion-contacto {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,46 @@
+.quienes-somos {
+  background-color: #f9f9f9; /* Color de fondo suave */
+  padding: 30px 10px; /* Espaciado superior e inferior */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.about-us {
+  background: linear-gradient(135deg, #ffffff 50%, #f0f0f0 50%); /* Fondo con degradado suave */
+  padding: 40px 20px; /* Espaciado interno */
+  max-width: 1000px; /* Ancho máximo flexible */
+  box-sizing: border-box;
+  border-radius: 10px; /* Bordes redondeados sutiles */
+  position: relative;
+  overflow: hidden;
+}
+
+.about-us h2 {
+  font-size: 36px; /* Título grande */
+  color: #333; /* Color oscuro para el título */
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.about-us p {
+  font-size: 18px; /* Tamaño de texto legible */
+  color: #555;
+  line-height: 1.8; /* Espaciado entre líneas para mejor lectura */
+  margin-bottom: 20px;
+  text-align: justify; /* Alineación del texto */
+}
+
+.about-us p:first-child {
+  font-weight: 600; /* Negrita en el primer párrafo */
+}
+
+/* Estilo para los subtítulos */
+.about-us h2:nth-child(4) {
+  font-size: 32px;
+  color: #007BFF; /* Color azul para las marcas aliadas */
+  margin-top: 40px;
+}

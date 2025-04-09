@@ -1,0 +1,35 @@
+.slide-track1{
+    padding: 20px;
+}
+.slider1 {
+    width: auto; /* Ancho del slider */
+    height: auto; /* Altura automática para ajustarse al contenido */
+    margin: auto; /* Centra el slider */
+    overflow: hidden; /* Oculta las imágenes que sobresalen del contenedor */
+}
+
+.slider1 .slide-track1 {
+    display: flex; /* Disposición flexible para las imágenes */
+    animation: scroll 40s linear infinite; /* Animación continua */
+    width: calc(40000px * 10); /* Ajusta el ancho total según el número de imágenes */
+}
+
+.slider1 .slide1 {
+    width: 450px; /* Ancho de cada imagen */
+    margin-right: 20px; /* Espacio entre las imágenes */
+}
+
+.slider1 .slide1 img {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-450px * 20)); /* Cambia 128px por 150px */
+    }
+}
+  
